@@ -6,6 +6,16 @@ import { Message } from '../Message';
 import { styles } from './styles';
 
 export function Messages() {
+
+    const message = {
+        id: '1',
+        text: 'Essa é uma mensagem de teste!',
+        user: {
+            name: 'Vanderli',
+            avatar_url: 'https://github.com/Vanderllee.png'
+        }
+    }
+
     return (
         <ScrollView 
             style={styles.container}
@@ -13,20 +23,11 @@ export function Messages() {
             keyboardShouldPersistTaps="never"
         >
 
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
-            <Message />
+            <Message data={ message }/>
+            <Message data={ message }/>
+            <Message data={ message }/>
+            <Message data={ message }/>
+         
 
 
         </ScrollView>

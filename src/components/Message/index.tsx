@@ -5,21 +5,25 @@ import { UserPhoto } from '../UserPhoto';
 
 import { styles } from './styles';
 
-export function Message(){
+import { Props } from '../../utils/message_type';
+
+export function Message({ data }: Props){
   return (
     <View style={styles.container}>
-        <Text style={styles.message}>Mensagem</Text>
+        <Text style={styles.message}>
+          { data.text }
+        </Text>
 
 
         <View style={styles.footer}>
 
             <UserPhoto 
-                imageUri="https://github.com/Vanderllee.png"
+                imageUri={data.user.avatar_url}
                 sizes="SMALL"
             />
 
             <Text style={styles.userName}>
-                Nome do usuário
+                { data.user.name }
             </Text>
 
         </View>
