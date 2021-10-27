@@ -7,11 +7,19 @@ import { styles } from './styles';
 
 import { Props } from '../../utils/message_type';
 
+import { MotiView } from 'moti';
+
 export function Message({ data }: Props){
   return (
-    <View style={styles.container}>
+    <MotiView
+        from={{ opacity: 0, translateY: -50 }}
+        animate={{ opacity: 1, translateY: 0}}
+        transition={{ type: 'timing', duration: 2000 }}
+      style={styles.container}
+    >
+
         <Text style={styles.message}>
-          { data.text }
+          { data.text  }
         </Text>
 
 
@@ -27,6 +35,6 @@ export function Message({ data }: Props){
             </Text>
 
         </View>
-    </View>
+    </MotiView>
   );
 }
