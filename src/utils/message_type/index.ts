@@ -1,3 +1,7 @@
+import React from 'react';
+
+import { ColorValue, TouchableOpacityProps } from 'react-native';
+
 
 type User = {
     name: string;
@@ -12,4 +16,11 @@ type MessageProps = {
 
 export type Props ={
     data: MessageProps;
+   
+}
+
+export type ButtonProps = TouchableOpacityProps & {
+    title: string;
+    color: ColorValue;
+    backgroundColor: ColorValue;
 }
