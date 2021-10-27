@@ -15,7 +15,7 @@ export default function App() {
 
   const [fontsLoaded] = useFonts({
     Roboto_700Bold,
-    Roboto_400Regular
+    Roboto_400Regular,
   })
 
   if (!fontsLoaded) {
