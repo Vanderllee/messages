@@ -15,6 +15,8 @@ export function SigninBox(){
         title="ENTRAR COM O GITHUB"
         color={ COLORS.BLACK_PRIMARY }
         backgroundColor={ COLORS.YELLOW }
+        icon="github"
+        
     />
 
     </View>

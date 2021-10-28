@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { ColorValue, TouchableOpacityProps } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+
 
 
 type User = {
@@ -23,4 +25,6 @@ export type ButtonProps = TouchableOpacityProps & {
     title: string;
     color: ColorValue;
     backgroundColor: ColorValue;
+    icon?: React.ComponentProps<typeof AntDesign>['name']; 
+    isLoading?: boolean;
 }
